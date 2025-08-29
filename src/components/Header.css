@@ -1,0 +1,182 @@
+/* Altura e estilo do cabeçalho fixo */
+.nf-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 72px;
+  background: #1f8f1d; /* verde */
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+/* Container interno: logo à esquerda, menu à direita, alinhados ao "chão" */
+.nf-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;   /* cola no "chão" */
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+/* Marca (logo + slogan opcional) */
+.nf-brand {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tamanho controlado do logo */
+.nf-brand img {
+  height: 48px;
+  display: block;
+}
+
+/* Slogan, caso queira reativar */
+.nf-slogan {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding-bottom: 4px;  /* encosta no "chão" do header */
+}
+
+/* Menu horizontal */
+.nf-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;          /* horizontal */
+  align-items: center;    /* centraliza verticalmente no "chão" */
+  gap: 20px;
+}
+
+/* Links principais */
+.nf-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.nf-link:hover {
+  text-decoration: underline;
+}
+
+/* Submenus */
+.nf-has-sub {
+  position: relative;
+}
+
+.nf-submenu {
+  position: absolute;
+  right: 0;              /* abre alinhado à direita do item */
+  top: 100%;
+  background: #fff;
+  color: #111;
+  min-width: 220px;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.18);
+  display: none;         /* fechado por padrão */
+  padding: 8px 0;
+  margin: 0;
+}
+
+.nf-has-sub.is-open > .nf-submenu {
+  display: block;        /* abre quando o estado == aberto */
+}
+
+.nf-submenu li {
+  list-style: none;
+}
+
+.nf-sublink {
+  display: block;
+  padding: 8px 12px;
+  color: #111;
+  text-decoration: none;
+}
+
+.nf-sublink:hover {
+  background: #f2f2f2;
+}
+
+/* Seletor de idioma */
+.nf-lang {
+  position: relative;
+  margin-left: auto; /* empurra para a direita do menu horizontal */
+}
+
+.nf-lang > button {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nf-lang > button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown do idioma */
+.nf-lang-dropdown {
+  position: absolute;
+  top: 100%;   /* abre abaixo do botão */
+  right: 0;    /* alinhado à direita do botão */
+  background: #fff;
+  color: #111;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.18);
+  padding: 4px 0;
+  min-width: 80px;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.nf-lang-dropdown li {
+  list-style: none;
+}
+
+.nf-lang-dropdown li button {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #111;
+  font-weight: 400;
+  transition: background 0.2s;
+}
+
+.nf-lang-dropdown li button:hover {
+  background: #f2f2f2;
+}
+
+/* Animação suave de abertura */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Garante que o conteúdo não fique escondido sob o header fixo */
+.main-with-header {
+  padding-top: 72px;
+}
+
+/* Responsivo básico */
+@media (max-width: 900px) {
+  .nf-header-inner { align-items: center; }
+  .nf-menu { gap: 12px; }
+  .nf-brand img { height: 40px; }
+  .nf-lang { margin-left: 0; }  /* ajusta o menu de idiomas em telas pequenas */
+}
