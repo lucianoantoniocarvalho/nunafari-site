@@ -1,5 +1,4 @@
-// main.jsx
-import './i18n'; // IMPORTANTE: inicializa o i18n antes de qualquer componente
+import './i18n';
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
