@@ -8,6 +8,7 @@ import Layout from "./components/Layout.jsx";
 import App from "./App.jsx";
 import About from "./pages/About.jsx";
 import MusicClasses from "./pages/music-classes/MusicClasses";
+import PortugueseClasses from "./pages/portuguese-classes/PortugueseClasses";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
           <Route index element={<App />} />
           <Route path="about" element={<About />} />
           <Route path="/music-classes" element={<MusicClasses />} />
+          <Route path="portuguese-classes" element={<PortugueseClasses />} />
         </Route>
       </Routes>
     </BrowserRouter>

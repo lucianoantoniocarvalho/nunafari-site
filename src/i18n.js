@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    ns: ["menu-header", "music-classes"],
+    ns: ["menu-header", "music-classes", "about"],
     defaultNS: "menu-header",
     backend: {
       loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,

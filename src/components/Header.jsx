@@ -51,7 +51,11 @@ function Header() {
                 <li><Link to="/music-classes" className="nf-sublink" onClick={closeMenus}>
                   {t("menu.aulasMusica")}
                 </Link></li>
-                <li><a href="#" className="nf-sublink">{t("menu.aulasPortugues")}</a></li>
+                <li>
+  <Link to="/portuguese-classes" className="nf-sublink" onClick={closeMenus}>
+    {t("menu.aulasPortugues")}
+  </Link>
+</li>
               </ul>
             </li>
 
