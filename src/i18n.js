@@ -12,7 +12,7 @@ i18n
     ns: ["menu-header", "music-classes"],
     defaultNS: "menu-header",
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
     },
     interpolation: {
       escapeValue: false
