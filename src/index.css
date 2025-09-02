@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/* Normal 400 */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+/* Bold 700 */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+/* ExtraBold 800 */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
