@@ -13,7 +13,7 @@ function Hero() {
 
   return (
     <section className="text-center py-20 bg-gray-100">
-      <h1 className="text-5xl font-bold text-green-600">{hero.title}</h1>
+      <h1 className="font-poppins text-[4rem] font-extrabold text-[#21A51F]">{hero.title}</h1>
       <p className="text-2xl text-gray-700 mt-4 italic">{hero.slogan}</p>
       <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
         {hero.subtitle}
