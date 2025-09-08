@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()], // for local development
-  base: '/nunafari-site/'  // for GitHub Pages
+  base: '/'  // for GitHub Pages
 })
