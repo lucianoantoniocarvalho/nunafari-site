@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Header.css";
 
+// Estudar essa função
 function Header() {
   const [openMenu, setOpenMenu] = useState(null);
   const [langOpen, setLangOpen] = useState(false);
@@ -27,6 +28,7 @@ function Header() {
   ];
   const currentLang = i18n.language || "en";
 
+  // Mudar o css para tailwind:
   return (
     <header className="nf-header" role="banner">
       <div className="nf-header-inner">
