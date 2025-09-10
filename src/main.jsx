@@ -9,6 +9,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About.jsx";
 import MusicClasses from "./pages/music-classes/MusicClasses";
 import PortugueseClasses from "./pages/portuguese-classes/PortugueseClasses";
+import NunaVivi from "./pages/nuna-vivi/NunaVivi.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="about" element={<About />} />
           <Route path="/music-classes" element={<MusicClasses />} />
           <Route path="portuguese-classes" element={<PortugueseClasses />} />
+          <Route path="nuna-vivi/*" element={<NunaVivi />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -42,7 +42,7 @@ function Header() {
           <ul className="nf-menu">
             {/* Links principais */}
             <li><Link to="/" className="nf-link" onClick={closeMenus}>{t("menu.home")}</Link></li>
-            <li><a href="#" className="nf-link">{t("menu.revista")}</a></li>
+            <li><Link to="nuna-vivi" className="nf-link">{t("menu.revista")}</Link></li>
 
             {/* Aulas */}
             <li className={`nf-has-sub ${openMenu === "aulas" ? "is-open" : ""}`}>

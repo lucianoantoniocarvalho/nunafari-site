@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"; //This has to be in all pages.
 
-function About() {
+export default function About() {
   const { t } = useTranslation("/about");
 
   return (
@@ -66,4 +66,4 @@ function About() {
   );
 }
 
-export default About;
+//export default About;
