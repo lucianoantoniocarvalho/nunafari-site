@@ -34,7 +34,7 @@ function Header() {
       <div className="nf-header-inner">
         {/* Logo */}
         <Link to="/" className="nf-brand" onClick={closeMenus} aria-label="Nuna Fari - Home">
-          <img src={`${import.meta.env.BASE_URL}assets/logo-nunafari-fundo-verde.png`} alt="Nuna Fari logo" />
+          <img src={`${import.meta.env.BASE_URL}assets/logo-nunafari-green-background.png`} alt="Nuna Fari logo" />
         </Link>
 
         {/* Navegação */}

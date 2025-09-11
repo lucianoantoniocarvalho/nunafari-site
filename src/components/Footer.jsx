@@ -7,6 +7,7 @@ export default function Footer() {
   return (
     <div className="bg-[#21A51F]">
       <Contacts />
+      <img src={`${import.meta.env.BASE_URL}assets/logo-nunafari-green-background.png`} alt="Nuna Fari logo" />
     </div>
   );
 }
